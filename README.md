@@ -13,3 +13,5 @@ An app dedicated to coffee enthusiasts, regardless of their experience or expert
 
 * `/shared` is for the code that will be shared between all targets in the project.
   The most important subfolder is `commonMain`. If preferred, you can add code to the platform-specific folders here too.
+
+* Link to get you started with KMM (https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-setup.html#install-the-necessary-tools)
