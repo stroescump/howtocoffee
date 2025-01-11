@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test KMM
+    name: Build Android
     runs-on: ubuntu-latest
     strategy:
       matrix:
