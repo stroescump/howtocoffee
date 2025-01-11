@@ -1,0 +1,75 @@
+name: KMM CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test KMM
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    
+    steps:
+    # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Set up JDK (required for Kotlin)
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+
+    # Set up Gradle cache to speed up builds
+    - name: Cache Gradle
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          gradle-${{ runner.os }}-
+
+    # Build and test Android target
+    - name: Build Android
+      run: ./gradlew assembleDebug
+
+    - name: Run Android Tests
+      run: ./gradlew testDebugUnitTest
+
+  ios-build:
+    name: Build iOS
+    runs-on: macos-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Set up CocoaPods
+    - name: Set up CocoaPods
+      run: pod install --project-directory=iosApp
+
+    # Cache CocoaPods
+    - name: Cache CocoaPods
+      uses: actions/cache@v3
+      with:
+          path: |
+            Pods
+            ~/Library/Developer/Xcode/DerivedData
+          key: pods-${{ runner.os }}-${{ hashFiles('**/Podfile.lock') }}
+          restore-keys: |
+            pods-${{ runner.os }}-
+
+    # Build iOS Framework
+    - name: Build iOS Framework
+      run: ./gradlew :shared:packForXcode -PXCODE_CONFIGURATION=Debug
