@@ -56,13 +56,16 @@ jobs:
       uses: actions/checkout@v3
 
     # Verify or Regenerate Podfile
-    - name: Verify or Regenerate Podfile
+    - name: Generate Podfile
       run: |
-        if [ ! -f iosApp/Podfile ]; then
-          cd iosApp
-          pod init
-          echo "platform :ios, '13.0'\nuse_frameworks!\n\ntarget 'iosApp' do\n  pod 'shared', :path => '../shared'\nend" > Podfile
-        fi
+        cd iosApp
+        pod init
+        echo "platform :ios, '13.0'" > Podfile
+        echo "use_frameworks!" >> Podfile
+        echo "" >> Podfile
+        echo "target 'iosApp' do" >> Podfile
+        echo "  pod 'shared', :path => '../shared'" >> Podfile
+        echo "end" >> Podfile
 
     # Set up CocoaPods
     - name: Set up CocoaPods
