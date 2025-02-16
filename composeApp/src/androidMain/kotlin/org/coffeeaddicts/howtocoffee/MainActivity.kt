@@ -1,9 +1,13 @@
 package org.coffeeaddicts.howtocoffee
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.Button
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
@@ -11,7 +15,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            val context = LocalContext.current
+//            App()
+            Button(
+                onClick = {
+                   Toast(context).apply {
+                       show()
+                   }
+                },
+
+                ) {
+                Text("Random text")
+            }
         }
     }
 }
@@ -20,4 +35,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun AppAndroidPreview() {
     App()
+
 }
