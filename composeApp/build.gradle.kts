@@ -25,6 +25,8 @@ kotlin {
             // Decompose Libraries
             api(libs.decompose.decompose)
             implementation(libs.decompose.extensionsComposeJetbrains)
+            implementation(libs.koin.android)
+            implementation(libs.koin.core)
         }
         commonMain.dependencies {
             implementation(compose.runtime)

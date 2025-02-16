@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlin.serialization)
+    id("kotlin-parcelize")
 }
 
 kotlin {
@@ -28,8 +29,8 @@ kotlin {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
             api(libs.decompose.decompose)
-            implementation(libs.decompose.extensionsComposeJetbrains)
             api(libs.essenty.lifecycle)
+            api(libs.koin.core)
         }
     }
 }
