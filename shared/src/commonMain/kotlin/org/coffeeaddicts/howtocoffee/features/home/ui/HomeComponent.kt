@@ -22,7 +22,11 @@ class HomeComponent(
 
     private val scope = componentContext.coroutineScope()
 
-    fun onContinue() = scope.launch {
+    /**
+     * This is an example of how to use the framework for async tasks, like network calls, DB calls
+     * or anything that's long running.
+     */
+    fun onCoffeeDiagnoseClicked() = scope.launch {
         _uiState.update { HomeUiState.Loading }
         withContext(Dispatchers.Default) {
             delay(3000)
@@ -30,4 +34,7 @@ class HomeComponent(
         _uiState.update { HomeUiState.Default }
         goToCoffeeDiagnose()
     }
+
+    fun onFindYourTasteClicked() = goToFindYourTaste()
+    fun onRecipeAgendaClicked() = goToRecipeAgenda()
 }

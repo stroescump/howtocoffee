@@ -17,7 +17,8 @@ import com.arkivanov.essenty.lifecycle.essentyLifecycle
 
 @Composable
 fun HomeScreen(
-    homeComponent: HomeComponent
+    homeComponent: HomeComponent,
+
 ) {
     val uiState = homeComponent.uiState.subscribeAsState()
 
@@ -29,7 +30,28 @@ fun HomeScreen(
         Text("This is homepage. You managed to set everything up correctly.")
         Button(onClick = {
             uiState.value
-            homeComponent.onContinue()
+            homeComponent.onCoffeeDiagnoseClicked()
+        }) {
+            Text("Diagnose your brew")
+        }
+
+        Button(onClick = {
+            uiState.value
+            homeComponent.onCoffeeDiagnoseClicked()
+        }) {
+            Text("Diagnose your brew")
+        }
+
+        Button(onClick = {
+            uiState.value
+            homeComponent.onCoffeeDiagnoseClicked()
+        }) {
+            Text("Diagnose your brew")
+        }
+
+        Button(onClick = {
+            uiState.value
+            homeComponent.onCoffeeDiagnoseClicked()
         }) {
             Text("Diagnose your brew")
         }

@@ -28,8 +28,8 @@ class MainActivity : ComponentActivity() {
             when (val screen = currentScreen.active.instance) {
                 is HomeComponent -> HomeScreen(screen)
                 is CoffeeDiagnoseComponent -> CoffeeDiagnoseScreen(screen)
-                is RecipeAgendaComponent -> FindYourTasteScreen(screen)
-                is FindYourTasteComponent -> RecipeAgendaScreen(screen)
+                is RecipeAgendaComponent -> RecipeAgendaScreen(screen)
+                is FindYourTasteComponent -> FindYourTasteScreen(screen)
             }
         }
     }
