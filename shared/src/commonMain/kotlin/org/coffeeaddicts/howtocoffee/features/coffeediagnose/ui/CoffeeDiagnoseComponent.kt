@@ -6,4 +6,5 @@ import org.koin.core.component.KoinComponent
 class CoffeeDiagnoseComponent(
     private val componentContext: ComponentContext
 ) : KoinComponent, ComponentContext by componentContext {
+
 }

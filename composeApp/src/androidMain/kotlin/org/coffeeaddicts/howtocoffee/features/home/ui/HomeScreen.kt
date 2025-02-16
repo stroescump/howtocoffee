@@ -3,7 +3,8 @@ package org.coffeeaddicts.howtocoffee.features.home.ui
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Button
+import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,23 +19,36 @@ import com.arkivanov.essenty.lifecycle.essentyLifecycle
 fun HomeScreen(
     homeComponent: HomeComponent
 ) {
-    homeComponent.uiState.subscribeAsState()
+    val uiState = homeComponent.uiState.subscribeAsState()
 
-    MaterialTheme {
-        Column(
-            Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text("This is homepage. You managed to set everything up correctly.")
+    Column(
+        Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("This is homepage. You managed to set everything up correctly.")
+        Button(onClick = {
+            uiState.value
+            homeComponent.onContinue()
+        }) {
+            Text("Diagnose your brew")
+        }
+
+        if (uiState.value == HomeUiState.Loading) {
+            Loading()
         }
     }
+}
+
+@Composable
+private fun Loading() {
+    LinearProgressIndicator()
 }
 
 @Preview
 @Composable
 fun HomeScreenPreview() {
     val lifecycle = LocalLifecycleOwner.current.essentyLifecycle()
-    val homeComponent = HomeComponent(DefaultComponentContext(lifecycle))
+    val homeComponent = HomeComponent(DefaultComponentContext(lifecycle), {}, {}, {})
     HomeScreen(homeComponent)
 }

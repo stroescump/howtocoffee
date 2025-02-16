@@ -30,7 +30,9 @@ kotlin {
             // put your Multiplatform dependencies here
             api(libs.decompose.decompose)
             api(libs.essenty.lifecycle)
+            api(libs.essenty.lifecycle.coroutine)
             api(libs.koin.core)
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }
