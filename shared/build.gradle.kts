@@ -32,7 +32,7 @@ kotlin {
             api(libs.essenty.lifecycle)
             api(libs.essenty.lifecycle.coroutine)
             api(libs.koin.core)
-            implementation(libs.kotlinx.coroutines.core)
+            api(libs.kotlinx.coroutines.core)
         }
     }
 }
