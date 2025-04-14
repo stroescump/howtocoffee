@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jetbrains.kotlin.konan.target.Family
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -15,6 +17,40 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
+
+    targets.filterIsInstance<KotlinNativeTarget>()
+        .filter { it.konanTarget.family == Family.IOS }
+        .forEach {
+            it.binaries.framework {
+                val essenty_version = "2.2.1"
+                val decompose = "3.2.2"
+                export("com.arkivanov.decompose:decompose:<$decompose>")
+                export("com.arkivanov.essenty:lifecycle:<$essenty_version>")
+
+                // Exploring if this needs to be in/out
+
+//                // Optional, only if you need state preservation on Darwin (Apple) targets
+//                export("com.arkivanov.essenty:state-keeper:<$essenty_version>")
+//
+//                // Optional, only if you need state preservation on Darwin (Apple) targets
+//                export("com.arkivanov.parcelize.darwin:runtime:<parcelize_darwin_version>")
+            }
+        }
+
+//    cocoapods {
+//        framework {
+//
+//
+//            export("com.arkivanov.decompose:decompose:<version>")
+//            export("com.arkivanov.essenty:lifecycle:<essenty_version>")
+//
+//            // Optional, only if you need state preservation on Darwin (Apple) targets
+//            export("com.arkivanov.essenty:state-keeper:<essenty_version>")
+//
+//            // Optional, only if you need state preservation on Darwin (Apple) targets
+//            export("com.arkivanov.parcelize.darwin:runtime:<parcelize_darwin_version>")
+//        }
+//    }
 
     listOf(
         iosArm64(),
