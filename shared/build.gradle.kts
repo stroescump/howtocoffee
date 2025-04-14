@@ -1,6 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import org.jetbrains.kotlin.konan.target.Family
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -18,25 +16,6 @@ kotlin {
         }
     }
 
-    targets.filterIsInstance<KotlinNativeTarget>()
-        .filter { it.konanTarget.family == Family.IOS }
-        .forEach {
-            it.binaries.framework {
-                val essenty_version = "2.2.1"
-                val decompose = "3.2.2"
-                export("com.arkivanov.decompose:decompose:<$decompose>")
-                export("com.arkivanov.essenty:lifecycle:<$essenty_version>")
-
-                // Exploring if this needs to be in/out
-
-//                // Optional, only if you need state preservation on Darwin (Apple) targets
-//                export("com.arkivanov.essenty:state-keeper:<$essenty_version>")
-//
-//                // Optional, only if you need state preservation on Darwin (Apple) targets
-//                export("com.arkivanov.parcelize.darwin:runtime:<parcelize_darwin_version>")
-            }
-        }
-
     listOf(
         iosArm64(),
         iosX64(),
@@ -45,6 +24,10 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "Shared"
             isStatic = true
+
+            export(libs.decompose.decompose)
+            export(libs.decompose.extensionsComposeJetbrains)
+            export(libs.essenty.lifecycle)
         }
     }
 
@@ -56,6 +39,12 @@ kotlin {
             api(libs.essenty.lifecycle.coroutine)
             api(libs.koin.core)
             api(libs.kotlinx.coroutines.core)
+        }
+
+        iosMain.dependencies {
+            api(libs.decompose.decompose)
+            api(libs.decompose.extensionsComposeJetbrains)
+            api(libs.essenty.lifecycle)
         }
     }
 }

@@ -4,12 +4,14 @@ import Shared
 struct ContentView: View {
     @State private var showContent = true
     
+    // This is a random example of a component. This is not where or how it should be created, just wanted to fix the dependecy issues.
+     
+    private let component = HomeComponent(componentContext: DefaultComponentContext(lifecycle: ApplicationLifecycle()), goToCoffeeDiagnose: {}, goToFindYourTaste: {}, goToRecipeAgenda: {})
+    
     var body: some View {
         VStack {
             Button("Click me!") {
-                withAnimation {
-                    showContent = !showContent
-                }
+                component.onCoffeeDiagnoseClicked()
             }
 
             if showContent {
