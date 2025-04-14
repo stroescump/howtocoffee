@@ -2,7 +2,8 @@ import SwiftUI
 import Shared
 
 struct ContentView: View {
-    @State private var showContent = false
+    @State private var showContent = true
+    
     var body: some View {
         VStack {
             Button("Click me!") {
@@ -16,7 +17,7 @@ struct ContentView: View {
                     Image(systemName: "swift")
                         .font(.system(size: 200))
                         .foregroundColor(.accentColor)
-                    Text("SwiftUI: \(Greeting().greet())")
+                    Text("SwiftUI: Example")
                 }
                 .transition(.move(edge: .top).combined(with: .opacity))
             }
