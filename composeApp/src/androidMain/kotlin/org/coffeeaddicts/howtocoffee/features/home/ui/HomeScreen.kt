@@ -34,6 +34,21 @@ fun HomeScreen(
 ) {
     val uiState by homeComponent.uiState.subscribeAsState()
 
+    HomeScreenContents(
+        onFindYourTasteClicked = { homeComponent.onFindYourTasteClicked() },
+        onRecipeAgendaClicked = { homeComponent.onRecipeAgendaClicked() },
+        onCoffeeDiagnoseClicked = { homeComponent.onCoffeeDiagnoseClicked() },
+        uiState = uiState
+    )
+}
+
+@Composable
+private fun HomeScreenContents(
+    onCoffeeDiagnoseClicked: () -> Unit,
+    onFindYourTasteClicked: () -> Unit,
+    onRecipeAgendaClicked: () -> Unit,
+    uiState: HomeUiState
+) {
     Column(
         Modifier
             .fillMaxSize()
@@ -45,7 +60,7 @@ fun HomeScreen(
         Button(
             colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(R.color.brown)),
             onClick = {
-                homeComponent.onCoffeeDiagnoseClicked()
+                onCoffeeDiagnoseClicked()
             }, modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(0.42f)
@@ -65,7 +80,7 @@ fun HomeScreen(
             Button(
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
                 onClick = {
-                    homeComponent.onFindYourTasteClicked()
+                    onFindYourTasteClicked()
                 }, modifier = Modifier
                     .fillMaxWidth(0.5f)
                     .fillMaxHeight(0.5f)
@@ -82,7 +97,7 @@ fun HomeScreen(
             Button(
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.DarkGray),
                 onClick = {
-                    homeComponent.onRecipeAgendaClicked()
+                    onRecipeAgendaClicked()
                 }, modifier = Modifier
                     .fillMaxWidth()
                     .fillMaxHeight(0.5f)
@@ -138,14 +153,6 @@ private fun Loading() =
 
 @Preview
 @Composable
-fun LoadingPreview() {
-    val homeComponent = HomeComponent.onlyForPreview.component1()
-    HomeScreen(homeComponent)
-}
-
-@Preview
-@Composable
-fun ErrorPreview() {
-    val homeComponent = HomeComponent.onlyForPreview.component2()
-    HomeScreen(homeComponent)
+fun DefaultState() {
+    HomeScreenContents({}, {}, {}, HomeUiState.Default)
 }
