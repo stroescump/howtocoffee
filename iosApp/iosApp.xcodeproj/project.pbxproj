@@ -10,7 +10,16 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		E2EA4C522DB4396C00E0C22F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C512DB4396C00E0C22F /* RootView.swift */; };
+		E2EA4C542DB439C800E0C22F /* CoffeeDiagnose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */; };
+		E2EA4C562DB439FC00E0C22F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C552DB439FA00E0C22F /* Home.swift */; };
+		E2EA4C5D2DB43A7000E0C22F /* StateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C5B2DB43A7000E0C22F /* StateValue.swift */; };
+		E2EA4C5E2DB43A7000E0C22F /* MutableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C572DB43A7000E0C22F /* MutableValue.swift */; };
+		E2EA4C5F2DB43A7000E0C22F /* SimpleChildStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C592DB43A7000E0C22F /* SimpleChildStack.swift */; };
+		E2EA4C602DB43A7000E0C22F /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C5A2DB43A7000E0C22F /* StackView.swift */; };
+		E2EA4C612DB43A7000E0C22F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C582DB43A7000E0C22F /* ObservableValue.swift */; };
+		E2EA4C652DB4401300E0C22F /* RecipeAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */; };
+		E2EA4C672DB4405000E0C22F /* FindYourTasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +27,18 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* HowToCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowToCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E2EA4C512DB4396C00E0C22F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDiagnose.swift; sourceTree = "<group>"; };
+		E2EA4C552DB439FA00E0C22F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E2EA4C572DB43A7000E0C22F /* MutableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableValue.swift; sourceTree = "<group>"; };
+		E2EA4C582DB43A7000E0C22F /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		E2EA4C592DB43A7000E0C22F /* SimpleChildStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChildStack.swift; sourceTree = "<group>"; };
+		E2EA4C5A2DB43A7000E0C22F /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		E2EA4C5B2DB43A7000E0C22F /* StateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateValue.swift; sourceTree = "<group>"; };
+		E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAgendaView.swift; sourceTree = "<group>"; };
+		E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourTasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +88,13 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */,
+				E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */,
+				E2EA4C5C2DB43A7000E0C22F /* DecomposeHelpers */,
+				E2EA4C552DB439FA00E0C22F /* Home.swift */,
+				E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */,
+				E2EA4C512DB4396C00E0C22F /* RootView.swift */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -85,6 +108,18 @@
 				AB3632DC29227652001CCB65 /* Config.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E2EA4C5C2DB43A7000E0C22F /* DecomposeHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA4C572DB43A7000E0C22F /* MutableValue.swift */,
+				E2EA4C582DB43A7000E0C22F /* ObservableValue.swift */,
+				E2EA4C592DB43A7000E0C22F /* SimpleChildStack.swift */,
+				E2EA4C5A2DB43A7000E0C22F /* StackView.swift */,
+				E2EA4C5B2DB43A7000E0C22F /* StateValue.swift */,
+			);
+			path = DecomposeHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +220,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EA4C672DB4405000E0C22F /* FindYourTasteView.swift in Sources */,
+				E2EA4C652DB4401300E0C22F /* RecipeAgendaView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				E2EA4C542DB439C800E0C22F /* CoffeeDiagnose.swift in Sources */,
+				E2EA4C562DB439FC00E0C22F /* Home.swift in Sources */,
+				E2EA4C5D2DB43A7000E0C22F /* StateValue.swift in Sources */,
+				E2EA4C5E2DB43A7000E0C22F /* MutableValue.swift in Sources */,
+				E2EA4C5F2DB43A7000E0C22F /* SimpleChildStack.swift in Sources */,
+				E2EA4C602DB43A7000E0C22F /* StackView.swift in Sources */,
+				E2EA4C612DB43A7000E0C22F /* ObservableValue.swift in Sources */,
+				E2EA4C522DB4396C00E0C22F /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
