@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02CD14CF2DB409B300979253 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD14CE2DB409AC00979253 /* StackView.swift */; };
+		02CD14D12DB40A0100979253 /* StateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD14D02DB409F300979253 /* StateValue.swift */; };
+		02CD14D32DB40A9600979253 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD14D22DB40A8D00979253 /* ObservableValue.swift */; };
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02CD14CE2DB409AC00979253 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		02CD14D02DB409F300979253 /* StateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateValue.swift; sourceTree = "<group>"; };
+		02CD14D22DB40A8D00979253 /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
@@ -70,6 +76,9 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				02CD14D22DB40A8D00979253 /* ObservableValue.swift */,
+				02CD14D02DB409F300979253 /* StateValue.swift */,
+				02CD14CE2DB409AC00979253 /* StackView.swift */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -186,7 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				02CD14D32DB40A9600979253 /* ObservableValue.swift in Sources */,
+				02CD14D12DB40A0100979253 /* StateValue.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				02CD14CF2DB409B300979253 /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +332,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Z42AG5XMT;
+				DEVELOPMENT_TEAM = ANNM3BXP39;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +359,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Z42AG5XMT;
+				DEVELOPMENT_TEAM = ANNM3BXP39;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
