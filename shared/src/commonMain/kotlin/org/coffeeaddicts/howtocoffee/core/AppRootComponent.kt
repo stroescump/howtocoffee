@@ -42,7 +42,9 @@ class AppRootComponent(
             when (config) {
 
                 Config.CoffeeDiagnose -> Screens.CoffeeDiagnose(
-                    CoffeeDiagnoseComponent(componentContext)
+                    CoffeeDiagnoseComponent(componentContext) {
+                        onBackClicked()
+                    }
                 )
 
                 Config.FindYourTaste -> Screens.FindYourTaste(

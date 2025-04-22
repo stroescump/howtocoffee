@@ -12,8 +12,10 @@ struct CoffeeDiagnoseView: View {
     private let root: CoffeeDiagnoseComponent
     
     var body: some View {
-        VStack {
-        }
+            Button(("Back"), action: {
+                root.goBack()
+            })
+    
     }
     
     init(_ root: CoffeeDiagnoseComponent) {

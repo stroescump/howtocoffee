@@ -14,6 +14,9 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Text("I made it to Home. Lmao.")
+            Button(("Button"), action: {
+                root.onCoffeeDiagnoseClicked()
+            })
         }
     }
     
