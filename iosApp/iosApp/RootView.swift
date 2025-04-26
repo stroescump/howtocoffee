@@ -32,15 +32,17 @@ struct RootView: View {
         ) { child in
             switch child {
             case let child as RootComponentScreens.CoffeeDiagnose: CoffeeDiagnoseView(child.coffeeDiagnoseComponent)
-            case let child as RootComponentScreens.Home: HomeView(child.homeComponent)
+            case let child as RootComponentScreens.Home: HomeView(root: child.homeComponent)
             default: EmptyView()
             }
         }
     }
 }
 
+/*
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView(AppRootComponent.companion.createAppRootComponent())
     }
 }
+*/

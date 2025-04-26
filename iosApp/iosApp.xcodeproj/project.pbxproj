@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A2B07D2DBD50B300B9CF06 /* HalfCircleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2B07C2DBD50A800B9CF06 /* HalfCircleShape.swift */; };
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		E2EA4C522DB4396C00E0C22F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C512DB4396C00E0C22F /* RootView.swift */; };
-		E2EA4C542DB439C800E0C22F /* CoffeeDiagnose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */; };
-		E2EA4C562DB439FC00E0C22F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C552DB439FA00E0C22F /* Home.swift */; };
+		E2EA4C542DB439C800E0C22F /* CoffeeDiagnoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C532DB439C200E0C22F /* CoffeeDiagnoseView.swift */; };
+		E2EA4C562DB439FC00E0C22F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C552DB439FA00E0C22F /* HomeView.swift */; };
 		E2EA4C5D2DB43A7000E0C22F /* StateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C5B2DB43A7000E0C22F /* StateValue.swift */; };
 		E2EA4C5E2DB43A7000E0C22F /* MutableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C572DB43A7000E0C22F /* MutableValue.swift */; };
 		E2EA4C5F2DB43A7000E0C22F /* SimpleChildStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA4C592DB43A7000E0C22F /* SimpleChildStack.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02A2B07C2DBD50A800B9CF06 /* HalfCircleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircleShape.swift; sourceTree = "<group>"; };
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
@@ -30,8 +32,8 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E2EA4C512DB4396C00E0C22F /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDiagnose.swift; sourceTree = "<group>"; };
-		E2EA4C552DB439FA00E0C22F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E2EA4C532DB439C200E0C22F /* CoffeeDiagnoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDiagnoseView.swift; sourceTree = "<group>"; };
+		E2EA4C552DB439FA00E0C22F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E2EA4C572DB43A7000E0C22F /* MutableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableValue.swift; sourceTree = "<group>"; };
 		E2EA4C582DB43A7000E0C22F /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
 		E2EA4C592DB43A7000E0C22F /* SimpleChildStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChildStack.swift; sourceTree = "<group>"; };
@@ -52,6 +54,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02A2B0792DBD500500B9CF06 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */,
+				E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */,
+				E2EA4C532DB439C200E0C22F /* CoffeeDiagnoseView.swift */,
+				02A2B07A2DBD502700B9CF06 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		02A2B07A2DBD502700B9CF06 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				02A2B07C2DBD50A800B9CF06 /* HalfCircleShape.swift */,
+				E2EA4C552DB439FA00E0C22F /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		058557D7273AAEEB004C7B11 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +110,12 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */,
-				E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */,
 				E2EA4C5C2DB43A7000E0C22F /* DecomposeHelpers */,
-				E2EA4C552DB439FA00E0C22F /* Home.swift */,
-				E2EA4C532DB439C200E0C22F /* CoffeeDiagnose.swift */,
-				E2EA4C512DB4396C00E0C22F /* RootView.swift */,
+				02A2B0792DBD500500B9CF06 /* UI */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
+				E2EA4C512DB4396C00E0C22F /* RootView.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 			);
 			path = iosApp;
@@ -222,9 +241,10 @@
 			files = (
 				E2EA4C672DB4405000E0C22F /* FindYourTasteView.swift in Sources */,
 				E2EA4C652DB4401300E0C22F /* RecipeAgendaView.swift in Sources */,
+				02A2B07D2DBD50B300B9CF06 /* HalfCircleShape.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				E2EA4C542DB439C800E0C22F /* CoffeeDiagnose.swift in Sources */,
-				E2EA4C562DB439FC00E0C22F /* Home.swift in Sources */,
+				E2EA4C542DB439C800E0C22F /* CoffeeDiagnoseView.swift in Sources */,
+				E2EA4C562DB439FC00E0C22F /* HomeView.swift in Sources */,
 				E2EA4C5D2DB43A7000E0C22F /* StateValue.swift in Sources */,
 				E2EA4C5E2DB43A7000E0C22F /* MutableValue.swift in Sources */,
 				E2EA4C5F2DB43A7000E0C22F /* SimpleChildStack.swift in Sources */,
