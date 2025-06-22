@@ -30,7 +30,7 @@ kotlin {
             export(libs.essenty.lifecycle)
         }
     }
-
+    
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
