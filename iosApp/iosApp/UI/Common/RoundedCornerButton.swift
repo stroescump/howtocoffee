@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RoundedCornerButton: View {
     var color: Color
+    var image: UIImage? = nil
     var text: String
     var action: () -> Void
     var cornersToRound: [UIRectCorner]
@@ -22,11 +23,18 @@ struct RoundedCornerButton: View {
                 if #available(iOS 16.0, *) {
                     ZStack {
                         color
-                        Text(text)
-                            .foregroundColor(.white)
-                            .bold()
-                            .multilineTextAlignment(.center)
-                            .padding()
+                        VStack {
+                            if image != nil {
+                                Image(uiImage: image!)
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                            Text(text)
+                                .foregroundColor(.white)
+                                .bold()
+                                .multilineTextAlignment(.center)
+                                .padding()
+                        }
                     }
                     .clipShape(
                         .rect(

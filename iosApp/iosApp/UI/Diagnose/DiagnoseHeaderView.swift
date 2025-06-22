@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  DiagnoseHeaderView.swift
 //  iosApp
 //
 //  Created by Alexandre Bevilacqua on 23.06.2025.
@@ -8,20 +8,21 @@
 
 import SwiftUI
 
-struct HomeHeaderView: View {
+struct DiagnoseHeaderView: View {
     private enum Strings {
-        static let toCoffeeTitle = "?toCoffee"
+        static let toCoffeeTitle = "What kind of coffee are you using?"
     }
     
     private enum Constants {
-        static let headerHeight: CGFloat = 100
+        static let headerHeight: CGFloat = 150
     }
 
     var body: some View {
         ZStack {
             Text(Strings.toCoffeeTitle)
-                .font(.custom("Georgia", size: 40))
+                .font(.custom("Georgia", size: 30))
                 .bold()
+                .padding()
         }
         .frame(maxWidth: .infinity)
         .frame(height: Constants.headerHeight)
@@ -33,5 +34,5 @@ struct HomeHeaderView: View {
 }
 
 #Preview {
-    HomeHeaderView()
+    DiagnoseHeaderView()
 }

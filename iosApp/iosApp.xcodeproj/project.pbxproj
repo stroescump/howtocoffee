@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02A2B07D2DBD50B300B9CF06 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2B07C2DBD50A800B9CF06 /* RoundedCornerButton.swift */; };
 		02D482AB2E08B4E4006415B4 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D482AA2E08B4DD006415B4 /* HomeHeaderView.swift */; };
+		02D482B22E08BD05006415B4 /* DiagnoseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D482B12E08BCFE006415B4 /* DiagnoseHeaderView.swift */; };
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		02A2B07C2DBD50A800B9CF06 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		02D482AA2E08B4DD006415B4 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		02D482B12E08BCFE006415B4 /* DiagnoseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnoseHeaderView.swift; sourceTree = "<group>"; };
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
@@ -59,10 +61,11 @@
 		02A2B0792DBD500500B9CF06 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				02D482B02E08BBCB006415B4 /* Common */,
 				E2EA4C662DB4404C00E0C22F /* FindYourTasteView.swift */,
 				E2EA4C642DB4401000E0C22F /* RecipeAgendaView.swift */,
-				E2EA4C532DB439C200E0C22F /* CoffeeDiagnoseView.swift */,
 				02A2B07A2DBD502700B9CF06 /* Home */,
+				02D482AF2E08BB76006415B4 /* Diagnose */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -71,10 +74,26 @@
 			isa = PBXGroup;
 			children = (
 				02D482AA2E08B4DD006415B4 /* HomeHeaderView.swift */,
-				02A2B07C2DBD50A800B9CF06 /* RoundedCornerButton.swift */,
 				E2EA4C552DB439FA00E0C22F /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		02D482AF2E08BB76006415B4 /* Diagnose */ = {
+			isa = PBXGroup;
+			children = (
+				02D482B12E08BCFE006415B4 /* DiagnoseHeaderView.swift */,
+				E2EA4C532DB439C200E0C22F /* CoffeeDiagnoseView.swift */,
+			);
+			path = Diagnose;
+			sourceTree = "<group>";
+		};
+		02D482B02E08BBCB006415B4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				02A2B07C2DBD50A800B9CF06 /* RoundedCornerButton.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		058557D7273AAEEB004C7B11 /* Preview Content */ = {
@@ -243,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2EA4C672DB4405000E0C22F /* FindYourTasteView.swift in Sources */,
+				02D482B22E08BD05006415B4 /* DiagnoseHeaderView.swift in Sources */,
 				E2EA4C652DB4401300E0C22F /* RecipeAgendaView.swift in Sources */,
 				02A2B07D2DBD50B300B9CF06 /* RoundedCornerButton.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,

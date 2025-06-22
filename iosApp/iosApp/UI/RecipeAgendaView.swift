@@ -16,8 +16,17 @@ struct RecipeAgendaView: View {
             
         }
     }
-    
-    init(_ root: RecipeAgendaComponent) {
-        self.root = root
-    }
 }
+
+/*
+ struct CoffeeDiagnoseView: View {
+     private let root: CoffeeDiagnoseComponent
+     
+     var body: some View {
+             Button(("Back"), action: {
+                 root.goBack()
+             })
+     
+     }
+ }
+*/
