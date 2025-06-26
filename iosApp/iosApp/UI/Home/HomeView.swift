@@ -35,7 +35,7 @@ struct HomeView: View {
                 VStack(spacing: Constants.buttonPadding) {
                     ZStack {
                         HStack(spacing: Constants.buttonPadding) {
-                            RoundedCornerButton(
+                            CustomCornerButton(
                                 color: Color("LightOrange"),
                                 text: Strings.findYourTaste,
                                 action: {
@@ -46,13 +46,13 @@ struct HomeView: View {
                             .padding([.leading, .top], Constants.buttonPadding)
 
                             VStack(spacing: Constants.buttonPadding) {
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: Color("StrongOrange"),
                                     text: Strings.na,
                                     action: { print("Top Right tapped") },
                                     cornersToRound: [.topLeft, .topRight, .bottomLeft, .bottomRight]
                                 )
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: .black,
                                     text: Strings.diagnoseBrew,
                                     action: {
@@ -69,7 +69,7 @@ struct HomeView: View {
                     ZStack {
                         HStack(spacing: Constants.buttonPadding) {
                             VStack(spacing: Constants.buttonPadding) {
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: .black,
                                     text: Strings.recipeAgenda,
                                     action: {
@@ -77,7 +77,7 @@ struct HomeView: View {
                                     },
                                     cornersToRound: [.topLeft, .bottomLeft, .bottomRight]
                                 )
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: .black,
                                     text: Strings.na,
                                     action: { print("Bottom Right 2 tapped") },
@@ -87,13 +87,13 @@ struct HomeView: View {
                             .padding([.leading, .bottom], Constants.buttonPadding)
 
                             VStack(spacing: Constants.buttonPadding) {
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: Color("StrongOrange"),
                                     text: Strings.coffeePlacesNearby,
                                     action: { print("Top Right 3 tapped") },
                                     cornersToRound: [.topRight, .bottomLeft, .bottomRight]
                                 )
-                                RoundedCornerButton(
+                                CustomCornerButton(
                                     color: Color("LightOrange"),
                                     text: Strings.na,
                                     action: { print("Bottom Right 3 tapped") },

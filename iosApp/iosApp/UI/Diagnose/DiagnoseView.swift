@@ -8,7 +8,7 @@
 import SwiftUI
 import Shared
 
-struct CoffeeDiagnoseView: View {
+struct DiagnoseView: View {
     private enum Constants {
         static let buttonPadding: CGFloat = 10
     }
@@ -19,7 +19,7 @@ struct CoffeeDiagnoseView: View {
         static let darkRoast = "Dark roast"
     }
     
-    let root: CoffeeDiagnoseComponent
+    // let root: CoffeeDiagnoseComponent
         
     var body: some View {
         ZStack(alignment: .top) {
@@ -30,26 +30,28 @@ struct CoffeeDiagnoseView: View {
                 DiagnoseHeaderView()
 
                 VStack(spacing: 15) {
-                    RoundedCornerButton(
+                    CustomCornerButton(
                         color: Color("LightOrange"),
                         image: UIImage(named: "Dark Roast"),
                         text: Strings.darkRoast,
                         action: { print("Dark Roast tapped") },
-                        cornersToRound: [.topRight, .bottomLeft]
-                    )
-                    RoundedCornerButton(
+                        cornersToRound: [.topRight, .bottomLeft])
+                    CustomCornerButton(
                         color: Color("StrongOrange"),
                         image: UIImage(named: "Medium Roast"),
                         text: Strings.mediumRoast,
                         action: { print("Medium Roast tapped") },
-                        cornersToRound: [.topLeft, .bottomRight]
-                    )
-                    RoundedCornerButton(
+                        cornersToRound: [.topLeft, .bottomRight])
+                    CustomCornerButton(
                         color: Color("LightOrange"),
                         image: UIImage(named: "Light Roast"),
                         text: Strings.lightRoast,
                         action: { print("Light Roast tapped") },
                         cornersToRound: [.topRight, .bottomLeft])
+                    
+                    RoundedCornerButton(title: "Title", action: {
+                        print("hello")
+                    })
                 }
                 .padding([.leading, .trailing])
             }

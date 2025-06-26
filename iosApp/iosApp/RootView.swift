@@ -31,7 +31,7 @@ struct RootView: View {
             onBack: root.onBackClicked
         ) { child in
             switch child {
-            case let child as RootComponentScreens.CoffeeDiagnose: CoffeeDiagnoseView(root: child.coffeeDiagnoseComponent)
+            case _ as RootComponentScreens.CoffeeDiagnose: DiagnoseView()
             case let child as RootComponentScreens.Home: HomeView(root: child.homeComponent)
             default: EmptyView()
             }
